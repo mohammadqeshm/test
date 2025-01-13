@@ -2,10 +2,11 @@
 var map = L.map('map').setView([27, 55], 8);
 
 // اضافه کردن لایه OpenStreetMap
-var OpenStreetMap_CAT = L.tileLayer('https://tile.openstreetmap.bzh/ca/{z}/{x}/{y}.png', {
-	maxZoom: 19,
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://www.openstreetmap.cat" target="_blank">Breton OpenStreetMap Team</a>'
-}).addTo(map)
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://carto.com/">CARTO</a>'
+}).addTo(map);
+
 
     // داده‌های GeoJSON شامل خطوط (LineString)
     var streets = [
